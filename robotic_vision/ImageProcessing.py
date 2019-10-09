@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from skimage import data, io, filters
 import matplotlib.pyplot as plt
 
@@ -9,5 +11,5 @@ print(type(image))
 print(image.shape)
 print(image.size)
 
-# io.imshow(edges)
-# io.show()
+io.imshow(edges)
+io.show()
