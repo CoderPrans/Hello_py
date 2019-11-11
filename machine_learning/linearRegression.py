@@ -38,18 +38,24 @@ def plot_regression_line(x, y, b):
     # function to show plot
     pt.show()
 
-def main():
+def getXandY(dataframe):
+    x = list()
+    y = list()
+    for arr in dataframe:
+        x.append(arr[0])
+        y.append(arr[1])
+    return (x,y) 
+        
+if __name__ == "__main__":
     # observations
-    x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-    y = np.array([1, 3, 2, 5, 7, 8, 8, 9, 10, 12])
+    # x = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    # y = np.array([1, 3, 2, 5, 7, 8, 8, 9, 10, 12])
+    dataframe = np.genfromtxt('dataset.csv', delimiter=',')
+    x = np.array(getXandY(dataframe)[0])
+    y = np.array(getXandY(dataframe)[1])
 
     # estimating coefficients
     b = estimate_coef(x, y)
 
     # plotting regression line
     plot_regression_line(x, y, b)
-
-if __name__ == "__main__":
-    main()
-
-
