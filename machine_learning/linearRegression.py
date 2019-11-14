@@ -51,7 +51,7 @@ def genVariables(columns, df):
     return variables
 
 def doRegression(**args):
-    i = 2
+    i = 3
     x = args['x'][i]
     y = args['y']
     # get labels

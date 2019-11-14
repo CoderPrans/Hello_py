@@ -1,12 +1,4 @@
-"""
-This program performs two different logistic regression implementations on two
-different datasets of the format [float,float,boolean], one
-implementation is in this file and one from the sklearn library. The program
-then compares the two implementations for how well the can predict the given outcome
-for each input tuple in the datasets.
-
-@author Per Harald Borgen
-"""
+#!/usr/bin/env python
 
 import math
 import numpy as np
@@ -36,8 +28,6 @@ X = np.array(X)
 X = min_max_scaler.fit_transform(X)
 Y = df["label"].map(lambda x: float(x.rstrip(';')))
 Y = np.array(Y)
-
-
 # if want to create a new clean dataset 
 ##X = pd.DataFrame.from_records(X,columns=['grade1','grade2'])
 ##X.insert(2,'label',Y)
@@ -45,6 +35,10 @@ Y = np.array(Y)
 
 # creating testing and training set
 X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=0.33)
+
+# print(X_train)
+# print(X_test)
+
 
 # train scikit learn model 
 clf = LogisticRegression()
