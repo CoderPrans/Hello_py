@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 decorator = "==4.4.0"
 imageio = "==2.5.0"
-joblib = "==0.13.2"
+joblib = "==1.2.0"
 kiwisolver = "==1.1.0"
 matplotlib = "==3.1.1"
 networkx = "==2.3"
